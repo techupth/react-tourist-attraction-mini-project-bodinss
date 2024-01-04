@@ -195,6 +195,10 @@ header {
   bottom: 10px;
 }
 
+.copy-link-icon:hover {
+  cursor: pointer;
+}
+
 @keyframes bottomShake {
   0%,
   100% {

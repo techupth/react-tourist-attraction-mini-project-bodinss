@@ -32,6 +32,12 @@ export function TravelAttractionList() {
     alert("📝 คัดลอก URL ของเนื้อหาเรียบร้อย 😊");
   };
 
+  const handleTagClick = (tags) => {
+    setSearchMessage((prevSearchMessage) =>
+      prevSearchMessage.trim() === "" ? tags : `${prevSearchMessage} ${tags}`
+    );
+  };
+
   function limitCharacters(text, maxCharacters) {
     // Split the text into an array of characters
     let characters = Array.from(text);
@@ -117,7 +123,11 @@ export function TravelAttractionList() {
                 <p className="travel-tag-title">หมวด:</p>
                 {travel.tags.map((tags, i) => {
                   return (
-                    <div className="travel-tag" key={i}>
+                    <div
+                      className="travel-tag"
+                      key={i}
+                      onClick={() => handleTagClick(tags)}
+                    >
                       {tags}
                     </div>
                   );
