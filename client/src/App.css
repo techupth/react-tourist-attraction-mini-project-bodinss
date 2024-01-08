@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Kanit;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-bottom: 10px solid #ccc1b7;
+  border-top: 50px solid #f5f0e9;
+  position: relative;
+}
+
+.header-image {
+  animation: bottomShake 2s ease 2s infinite normal forwards;
+}
+
+.bus-icon {
+  position: absolute;
+  height: 10vh;
+  animation: slideInAndOut 20s ease-in-out infinite;
+  left: 60px;
+  bottom: -25px;
+}
+
+.container {
+  background: #f5f0ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.website-logo {
+  color: #5a5753;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.search-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-topic {
+  color: white;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: left;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 50px;
+  background-color: #5a5753;
+  position: relative;
+}
+
+.search-box {
+  width: 40vw;
+  height: 5vh;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #aa9483;
+  margin-bottom: 20px;
+  color: #5a5753;
+}
+
+.magnifying-glass-icon {
+  position: absolute;
+  height: 30px;
+  left: 620px;
+  top: 369px;
+}
+
+.travel-lists-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 70vw;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.travel-lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.travel-lists-left {
+  display: flex;
+}
+
+.travel-main-image-preview {
+  border-radius: 30px;
+  margin-left: 20px;
+}
+
+.travel-lists-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  position: relative;
+}
+
+.travel-title-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #5a5753;
+  text-decoration: none;
+}
+.travel-title-text:hover {
+  color: #8c827b;
+  cursor: pointer;
+}
+
+.dot-symbol {
+  color: #8c827b;
+  font-weight: bold;
+}
+
+.read-more {
+  color: #8c827b;
+}
+.read-more:hover {
+  color: black;
+}
+
+.travel-description {
+  color: gray;
+  font-size: 20px;
+  width: fit-content;
+}
+
+.travel-tag-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.travel-tag-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.travel-tag {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  background-color: #8c827b;
+  color: white;
+  border-radius: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.travel-image-preview {
+  display: flex;
+  flex-direction: row;
+}
+
+.small-images-preview {
+  display: flex;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.copy-link-icon {
+  position: absolute;
+  left: 800px;
+  bottom: 10px;
+}
+
+.copy-link-icon:hover {
+  cursor: pointer;
+}
+
+@keyframes bottomShake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+
+  10% {
+    transform: rotate(2deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes slideInAndOut {
+  0% {
+    transform: translateX(-10vw); /* Start position: off-screen to the left */
+  }
+  50% {
+    transform: translateX(0); /* Middle position: fully on-screen */
+  }
+  100% {
+    transform: translateX(90vw); /* End position: off-screen to the right */
+  }
+}
